@@ -1,0 +1,64 @@
+<DOCTYPE html>
+<html>
+  <head>
+    <title>SendMailForm</title>
+    <meta charset='utf-8'>
+  </head>
+
+  <style>
+    .formContainer{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .formMail{
+      width: 40%;
+      height: 40%;
+    }
+    .formTo{
+      display: flex;
+      justify-content: space-between;
+      margin-top: 5px;
+    }
+    .formSubject{
+      display: flex;
+      justify-content: space-between;
+      margin-top: 5px;
+    }
+    .formBody{
+      display: flex;
+      justify-content: space-between;
+      margin-top: 5px;
+    }
+    .formMail button{
+      position: relative;
+      left: 45%;
+      top: 5%;
+    }
+  </style>
+
+  <body>
+    <div class='formContainer'>
+      <form class='formMail' action='http://localhost:1234/utils/sendMail/resetPass' method="post">
+
+        <div class='formBody'>
+          <label for='username'>Username: </label>
+          <input type='text' id='username' name='username'></input>
+        </div>
+
+        <div class='formBody'>
+          <label for='email'>Email: </label>
+          <input type='text' id='email' name='email'></input>
+        </div>
+
+        <div class='formBody'>
+          <label for='password'>Pass: </label>
+          <input type='text' id='password' name='password'></input>
+        </div>
+
+        <button type="submit">SEND</button>
+      </form>
+    </div>
+  </body>
+</html>
